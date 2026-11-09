@@ -3,7 +3,6 @@
 [![CI](https://github.com/abul-lab/Autonomous-Bug-Hunter-Playwright/actions/workflows/ci.yml/badge.svg)](https://github.com/abul-lab/Autonomous-Bug-Hunter-Playwright/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](docker-compose.yml)
-[![Tests: 95 Passing](https://img.shields.io/badge/tests-95%20passing-brightgreen.svg)](tests/)
 
 > ### ⚡ 30-Second Overview for Engineers
 > - **What is ABH?** An evidence-based continuous QE platform that drives Playwright browser sessions, captures raw failure telemetry, and extracts canonical bug datasets.
