@@ -236,7 +236,7 @@ Running full E2E Playwright test suites on every pull request is cost-prohibitiv
 - A GitHub Action step that comments on PRs: *"PR touches `CartSummary.tsx` and `CheckoutController.cs`. Selected 4 of 120 Playwright journeys covering 98.2% of blast radius in 42 seconds."*
 
 #### 4.7 Resume & Hiring-Manager Impact
-- **Resume Bullet:** *"Designed PR-aware predictive test selection engine integrating Tree-sitter AST analysis with an Application Knowledge Graph, targeting lower CI cycle times while ensuring 99% defect catch rate."*
+- **Resume Bullet:** *"Designed PR-aware predictive test selection engine integrating Tree-sitter AST analysis with an Application Knowledge Graph, targeting lower CI cycle times, with the goal of catching regressions before release."*
 - **Hiring-Manager Reaction:** Shows high-level awareness of developer productivity engineering (DPE) and CI/CD economics.
 
 #### 4.8 Metrics
@@ -351,10 +351,10 @@ Playwright Locator Timeout (e.g., page.getByRole('button', { name: 'Submit' }))
 
 #### 6.5 Unique QE Capabilities Provided
 - **Zero API Cost & Unlimited Throughput:** Runs completely air-gapped on developer laptops or CI runners without OpenAI/Anthropic rate limits or \$0.03/call expenses.
-- **Ultra-Low Latency:** Inference times under 80ms on local CPU/ONNX vs 1200ms+ for cloud LLM APIs, enabling real-time browser interaction loops.
+- **Low-Latency Local Inference (planned):** Local CPU/ONNX inference is expected to be much faster than cloud LLM APIs, which would support near-real-time browser interaction. This has not been benchmarked in this repository.
 
 #### 6.6 Resume & Hiring-Manager Impact
-- **Resume Bullet:** *"Fine-tuned and quantized domain-specific 1.5B SLMs (QLoRA) and ModernBERT encoders for web action synthesis and failure classification, published on Hugging Face with sub-80ms local ONNX inference."*
+- **Resume Bullet:** *"Built a ModernBERT failure-classification pipeline and a curated 100-incident Playwright failure dataset with a documented, honest post-mortem of its baseline results (Macro F1 20%)."*
 - **Hiring-Manager Reaction:** Puts you in the top 1% of AI applicants: you understand dataset construction, loss functions, tokenization, model deployment, and optimization.
 
 #### 6.7 Metrics
@@ -515,7 +515,7 @@ gantt
    - Build a reusable GitHub Action that calculates git diffs, traverses the graph, and triggers only the affected Playwright journeys.
 
 ### 3. Long-Term Moonshot Capabilities (3–6 Months)
-*Target: Breakthrough, industry-leading innovations.*
+*Target: Planned innovations, to be validated with measurements.*
 1. **Trained & Published Hugging Face Model (`abul-lab/qe-action-intent-1.5b`):**
    - Publish dataset, training code, model weights, and benchmark evaluation against GPT-4o-mini.
 2. **Curiosity-Driven MCTS Autonomous Explorer:**

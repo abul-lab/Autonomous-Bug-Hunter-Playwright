@@ -243,7 +243,7 @@ Only Run 1 has been executed. Runs 2–4 are targets taken from the execution pl
 
 ### Required Dataset Engineering Changes
 1. **Stratified Split Enforcement**:
-   - Guarantee balanced representation across all 8 classes in `train.jsonl` (70%), `val.jsonl` (15%), and `test.jsonl` (15%).
+   - Aim for balanced representation across all 8 classes in `train.jsonl` (70%), `val.jsonl` (15%), and `test.jsonl` (15%).
 2. **Telemetry Signature Expansion**:
    - Expand from 4 templates per class to 25+ distinct failure signatures per class harvested from real open-source test suites (Conduit, Spree, Ghost, DemoShop, DemoHotel).
 3. **Field Hydration**:

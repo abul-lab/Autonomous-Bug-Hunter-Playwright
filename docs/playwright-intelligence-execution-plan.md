@@ -74,7 +74,7 @@ The proposed 5-phase sequential cascade (*Collect all 3 datasets $\rightarrow$ P
 - **Target:** 1,000 verified failures with balanced class distribution ($\ge 80$ samples per category).
 - **Model Readiness:** Official release of `abul-lab/pim-root-cause-modernbert` (Target: Macro-F1 $\ge 0.88$).
 - **Benchmark Utility:** Official release of **Playwright Intelligence Benchmark (PIB-v1.0)** with baseline comparison leaderboard.
-- **Packaging:** Export merged weights and ONNX model for CPU inference (<40ms latency).
+- **Packaging:** Export merged weights and ONNX model for CPU inference (latency to be measured).
 
 #### 4. Milestone 5,000 (Enterprise Foundation — Day 90)
 - **Target:** 5,000 records including multi-role RBAC failures, flaky timing races, and live CI/CD telemetry.
@@ -133,9 +133,9 @@ Step 3: Publish PIM-RC Model (Day 60)     ── Release fine-tuned ModernBERT b
 | Model Candidate | Parameter Count | Context Window | Inference Latency (CPU) | Verdict |
 |---|:---:|:---:|:---:|---|
 | **answerdotai/ModernBERT-base** | **149M** | **8,192 tokens** | **not measured** | **RECOMMENDED:** Unmatched encoder performance for long logs and stack traces. Zero generative hallucinations. |
-| **Qwen2.5-Coder-1.5B** | 1.54B | 32,768 tokens | ~180ms | Overkill for classification; reserved for future Action Intent code generation (PIM-AI). |
-| **Phi-3.5-mini** | 3.8B | 128k tokens | ~450ms | Too heavy for CI/CD CPU runners. |
-| **SmolLM2-360M** | 360M | 8,192 tokens | ~65ms | Good runner-up, but inferior representation quality on structured error traces compared to ModernBERT. |
+| **Qwen2.5-Coder-1.5B** | 1.54B | 32,768 tokens | not measured | Overkill for classification; reserved for future Action Intent code generation (PIM-AI). |
+| **Phi-3.5-mini** | 3.8B | 128k tokens | not measured | Too heavy for CI/CD CPU runners. |
+| **SmolLM2-360M** | 360M | 8,192 tokens | not measured | Good runner-up, but inferior representation quality on structured error traces compared to ModernBERT. |
 
 ### Training Specifications
 - **Recommended Model:** `answerdotai/ModernBERT-base` with 8-class classification head.
@@ -207,7 +207,7 @@ To position yourself as an **AI Solutions Builder specializing in Quality Engine
 - **Week 8:** Export model to ONNX; publish `abul-lab/pim-root-cause-modernbert` to Hugging Face Hub with interactive Model Card and inference widget.
 
 ### Days 61–90: Enterprise Closed-Loop Integration & Moat Hardening
-- **Week 9:** Connect fine-tuned PIM-RC model into the .NET API via `Microsoft.ML.OnnxRuntime` for sub-40ms local inference in CI/CD.
+- **Week 9:** Connect fine-tuned PIM-RC model into the .NET API via `Microsoft.ML.OnnxRuntime` for local inference in CI/CD (latency to be measured).
 - **Week 10:** Derive `FSD-v1.0` (Failure Similarity Dataset) using hard-negative mining; fine-tune contrastive embedding head.
 - **Week 11:** Launch Closed-Loop Self-Healing action in GitHub Actions; auto-open PRs on test locator drift using verified AST patches.
 - **Week 12:** Author comprehensive engineering post & paper: *"Defeating the Test-Oracle Problem with Domain-Specific SLMs and Deterministic Verification."*
