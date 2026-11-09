@@ -143,6 +143,8 @@ node scripts/dev.mjs
 | **Demo Hotel** | [http://localhost:5291](http://localhost:5291) | Target booking application with seeded business logic flaws |
 | **Simulators** | [http://localhost:5292](http://localhost:5292) | Jira & Confluence REST mock simulators |
 
+> **Demo credentials:** The Demo Shop and Demo Hotel use fixed, fictional login accounts so the demo and the Playwright scripts can sign in consistently. These values are seeded only into the local demo apps, are not connected to any real system or service, and are not secrets. Do not reuse them for real accounts. If you run the demo apps anywhere other than a local machine, change the seeded passwords first.
+
 ### CLI & ML Pipeline Commands
 
 ```bash
