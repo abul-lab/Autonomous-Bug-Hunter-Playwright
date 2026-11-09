@@ -47,7 +47,7 @@ flowchart TB
     end
 
     subgraph ML_Subsystem["Phase 2: Domain-Specific SLM (Hugging Face / ONNX)"]
-        HF_SLM["Local SLM / ModernBERT Encoder<br/>sub-80ms CPU Inference (ONNX)"]
+        HF_SLM["Local SLM / ModernBERT Encoder<br/>CPU Inference (ONNX, latency not yet measured)"]
         HF_SLM -.->|Intent & Trace Embeddings| FC
         HF_SLM -.->|Semantic Candidate Scoring| SH
     end
@@ -249,14 +249,14 @@ To build defensible AI solutions, models must run locally, air-gapped, at high t
 #### Candidate A: Playwright Failure Root-Cause Classifier (`playwright-rootcause-modernbert`)
 - **Input:** Normalized error message, stack trace lines, console logs, HTTP status codes, locator snippet.
 - **Output:** 8-class taxonomy prediction with calibrated confidence score + root-cause explanation.
-- **Pros:** Encoder-only model (`ModernBERT`), handles 8,192 context length, blazing fast CPU inference (<30ms via ONNX), straightforward ground-truth dataset curation, zero hallucination risk.
+- **Pros:** Encoder-only model (`ModernBERT`), handles 8,192 context length, CPU inference via ONNX (speed to be measured), straightforward ground-truth dataset curation, zero hallucination risk.
 - **Cons:** Does not generate code strings directly.
 
 #### Candidate B: Action Intent Model (`qe-action-intent-1.5b`)
 - **Input:** Condensed DOM accessibility tree snippet + page context + high-level goal.
 - **Output:** Valid Playwright locator and atomic action payload in strict JSON schema.
 - **Pros:** Direct code synthesis; high demonstration appeal.
-- **Cons:** Prone to schema hallucinations without heavy constrained decoding; higher latency (>150ms).
+- **Cons:** Prone to schema hallucinations without heavy constrained decoding; higher latency than an encoder (not measured here).
 
 #### Candidate C: Risk Prediction Model (`qe-graph-risk-gnn`)
 - **Input:** Graph node embeddings + git diff code changes.
@@ -275,7 +275,7 @@ To build defensible AI solutions, models must run locally, air-gapped, at high t
 #### Justification:
 1. **Unassailable Ground Truth:** Test failures from public CI repositories (GitHub Actions, CircleCI) provide thousands of verifiable, labeled error logs with corresponding git fixes.
 2. **Deterministic Integration:** An encoder model outputs classification probabilities and dense embeddings, fitting seamlessly into our `FailureClassifier` and `FailureClusterEngine` without generative hallucinations.
-3. **Hardware & Speed Advantage:** ModernBERT runs locally on standard CPU CI runners via `onnxruntime` with sub-40ms latency, meaning enterprise users can run it without cloud GPUs or external API keys.
+3. **Hardware & Speed Advantage:** ModernBERT runs locally on standard CPU CI runners via `onnxruntime` with latency to be measured, meaning users can run it without cloud GPUs or external API keys.
 4. **Immediate Portfolio Authority:** Publishing a fine-tuned ModernBERT model on Hugging Face with an interactive Model Card, evaluation dataset, and ONNX weights proves full-cycle machine learning engineering competence.
 
 ---

@@ -12,7 +12,7 @@
 
 This report documents the completion of the **first baseline fine-tuning run** for the **Playwright Intelligence Model Root Cause Classifier (PIM-RC-v1)** using the `answerdotai/ModernBERT-base` encoder architecture.
 
-The objective was to establish the baseline sequence classification pipeline, validate the multi-modal input representation (`errorMessage`, `cleanedMessage`, `precedingActionTrail`, `frameworkState`), verify deterministic taxonomy label mappings, evaluate generalization on a held-out test split, and produce production-ready model artifacts.
+The objective was to establish the baseline sequence classification pipeline, validate the multi-modal input representation (`errorMessage`, `cleanedMessage`, `precedingActionTrail`, `frameworkState`), verify deterministic taxonomy label mappings, evaluate generalization on a held-out test split, and produce model artifacts for evaluation.
 
 ---
 

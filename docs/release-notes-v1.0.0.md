@@ -52,7 +52,7 @@ This release also introduces the **Playwright Intelligence Platform**, featuring
 
 ### 🤖 5. Playwright Intelligence Model (`PIM-RC-v1`)
 - **Backbone Architecture:** Fine-tuned `answerdotai/ModernBERT-base` (149M parameters, 8,192 token context window).
-- **Sub-35ms Inference:** Turnkey CLI inference (`ai/pipelines/predict.py`) and fast scikit-learn heuristic fallbacks for instant developer feedback.
+- **Fast Inference (not benchmarked):** Turnkey CLI inference (`ai/pipelines/predict.py`) and fast scikit-learn heuristic fallbacks for instant developer feedback.
 - **Visual Regression Perfection:** Achieved 100% Precision, Recall, and F1 on visual snapshot deviations.
 - **Model Distribution:** Checkpoints, configurations, and tokenizer assets structured for optional Hugging Face Hub distribution.
 
