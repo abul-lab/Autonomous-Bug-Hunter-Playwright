@@ -1107,8 +1107,16 @@ public class HuntRunner(IServiceScopeFactory scopes, HunterOptions opts, ILogger
     public (string Tenant, string Hunt)? Redeem(string ticket) =>
         _tickets.TryGetValue(ticket, out var t) && t.Expires > DateTime.UtcNow ? (t.Tenant, t.Hunt) : null;
 
-    public static string VideoPath(HunterOptions opts, string hunt) =>
-        Path.Combine(opts.MediaDir, System.Text.RegularExpressions.Regex.Replace(hunt, @"[^\w-]", "_") + ".webm");
+    public static string VideoPath(HunterOptions opts, string hunt)
+    {
+        // The hunt id is reduced to letters, digits, and dashes, and the result must stay inside the media directory.
+        var name = System.Text.RegularExpressions.Regex.Replace(hunt, @"[^\w-]", "_") + ".webm";
+        var root = Path.GetFullPath(opts.MediaDir);
+        var full = Path.GetFullPath(Path.Combine(root, name));
+        if (!full.StartsWith(root + Path.DirectorySeparatorChar, StringComparison.Ordinal))
+            throw new ArgumentException("Invalid hunt id.", nameof(hunt));
+        return full;
+    }
 
     public void Enqueue(Job j)
     {
