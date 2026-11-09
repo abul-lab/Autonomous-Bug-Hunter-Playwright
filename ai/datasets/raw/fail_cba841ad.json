@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_cba841ad",
+  "timestamp": "2026-11-07T21:31:38.246153+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/admin/staff",
+    "title": "DemoHotel - AuthenticationFailure",
+    "routePattern": "/admin/staff"
+  },
+  "route": "/admin/staff",
+  "workflow": {
+    "journeyId": "journey_demohotel_authenticationfailure",
+    "name": "DemoHotel AuthenticationFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 403 Forbidden: Role 'guest' lacks permission 'manage_staff'",
+  "normalizedError": {
+    "signature": "AuthenticationFailure_DemoHotel__admin_staff",
+    "cleanedMessage": "Request failed with status code 403 Forbidden: Role 'guest' lacks permission 'manage_staff'",
+    "salientTokens": [
+      "authenticationfailure",
+      "demohotel",
+      "adminstaff",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"error-container\"><h1>403 Forbidden</h1><p>Access denied</p></div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 37,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "1696057ac98441530d57b6593f63a4ff3b5d2c27c2dc76d986aa957c1dbcff62",
+    "storagePath": "media/screenshots/fail_cba841ad.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_cba841ad.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "Request failed with status code 403 Forbidden: Role 'guest' lacks permission 'manage_staff'",
+      "timestamp": "2026-11-07T21:31:38.246170+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/admin/staff",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "AuthenticationFailure",
+  "remediationRecommendation": "Automated guidance for AuthenticationFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.246175+00:00",
+    "notes": "Harvested telemetry for AuthenticationFailure in DemoHotel",
+    "tags": [
+      "authenticationfailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.246178+00:00"
+    }
+  }
+}

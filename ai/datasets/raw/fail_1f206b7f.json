@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_1f206b7f",
+  "timestamp": "2026-11-07T21:31:38.227827+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/hotel/availability",
+    "title": "DemoShop - TimingIssue",
+    "routePattern": "/hotel/availability"
+  },
+  "route": "/hotel/availability",
+  "workflow": {
+    "journeyId": "journey_demoshop_timingissue",
+    "name": "DemoShop TimingIssue Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Navigation timeout 15000ms exceeded waiting for load state 'networkidle'",
+  "normalizedError": {
+    "signature": "TimingIssue_DemoShop__hotel_availability",
+    "cleanedMessage": "Navigation timeout 15000ms exceeded waiting for load state 'networkidle'",
+    "salientTokens": [
+      "timingissue",
+      "demoshop",
+      "hotelavailability",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"spinner-overlay\" style=\"display: block;\">Checking availability...</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "hidden",
+      "display": "block",
+      "opacity": "0",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": false,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 37,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "dfaec9227b4ae01201cf42852dcde054fa72b601495bef6a14466feff9b85dcb",
+    "storagePath": "media/screenshots/fail_1f206b7f.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_1f206b7f.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "Navigation timeout 15000ms exceeded waiting for load state 'networkidle'",
+      "timestamp": "2026-11-07T21:31:38.227843+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3000/hotel/availability",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "TimingIssue",
+  "remediationRecommendation": "Automated guidance for TimingIssue in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.227847+00:00",
+    "notes": "Harvested telemetry for TimingIssue in DemoShop",
+    "tags": [
+      "timingissue",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.227850+00:00"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_b9bc3b88",
+  "timestamp": "2026-11-07T21:31:38.222161+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/hotel/booking",
+    "title": "DemoShop - LocatorDrift",
+    "routePattern": "/hotel/booking"
+  },
+  "route": "/hotel/booking",
+  "workflow": {
+    "journeyId": "journey_demoshop_locatordrift",
+    "name": "DemoShop LocatorDrift Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Timeout 30000ms exceeded waiting for locator('button.legacy-book')",
+  "normalizedError": {
+    "signature": "LocatorDrift_DemoShop__hotel_booking",
+    "cleanedMessage": "Timeout 30000ms exceeded waiting for locator('button.legacy-book')",
+    "salientTokens": [
+      "locatordrift",
+      "demoshop",
+      "hotelbooking",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.legacy-book",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<button id=\"reserve-room-btn\" class=\"btn-cta\">Reserve Suite</button>",
+    "parentTag": "button",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 45,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "6365bd2715128383e559045b6138dcc967f30a76ae27350c82c8c3b1c9877ff9",
+    "storagePath": "media/screenshots/fail_b9bc3b88.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_b9bc3b88.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "Timeout 30000ms exceeded waiting for locator('button.legacy-book')",
+      "timestamp": "2026-11-07T21:31:38.222191+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3000/hotel/booking",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "LocatorDrift",
+  "remediationRecommendation": "Automated guidance for LocatorDrift in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.222197+00:00",
+    "notes": "Harvested telemetry for LocatorDrift in DemoShop",
+    "tags": [
+      "locatordrift",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.222201+00:00"
+    }
+  }
+}

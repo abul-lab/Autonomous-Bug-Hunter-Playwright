@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_60563bc2",
+  "timestamp": "2026-11-07T21:31:38.253355+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/api/bookings/my-reservations",
+    "title": "Conduit - AuthenticationFailure",
+    "routePattern": "/api/bookings/my-reservations"
+  },
+  "route": "/api/bookings/my-reservations",
+  "workflow": {
+    "journeyId": "journey_conduit_authenticationfailure",
+    "name": "Conduit AuthenticationFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 401: Invalid session cookie 'connect.sid'",
+  "normalizedError": {
+    "signature": "AuthenticationFailure_Conduit__api_bookings_my-reservations",
+    "cleanedMessage": "Request failed with status code 401: Invalid session cookie 'connect.sid'",
+    "salientTokens": [
+      "authenticationfailure",
+      "conduit",
+      "apibookingsmy-reservations",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "{\"error\": \"Unauthorized\", \"statusCode\": 401}",
+    "parentTag": "body",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 57,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "c5835a0fbc5e9916a5b1bffd910b0be29076c3a6dc4d60cb756ddc0c1ac31ba7",
+    "storagePath": "media/screenshots/fail_60563bc2.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_60563bc2.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "Request failed with status code 401: Invalid session cookie 'connect.sid'",
+      "timestamp": "2026-11-07T21:31:38.253374+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3002/api/bookings/my-reservations",
+      "statusCode": 401,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "AuthenticationFailure",
+  "remediationRecommendation": "Automated guidance for AuthenticationFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.253377+00:00",
+    "notes": "Harvested telemetry for AuthenticationFailure in Conduit",
+    "tags": [
+      "authenticationfailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.253380+00:00"
+    }
+  }
+}

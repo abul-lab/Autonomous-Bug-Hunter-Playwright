@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_0a3a9b69",
+  "timestamp": "2026-11-07T21:31:38.243624+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/article/how-to-test",
+    "title": "DemoShop - TimingIssue",
+    "routePattern": "/article/how-to-test"
+  },
+  "route": "/article/how-to-test",
+  "workflow": {
+    "journeyId": "journey_demoshop_timingissue",
+    "name": "DemoShop TimingIssue Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "locator.click: Target page navigated before click completed",
+  "normalizedError": {
+    "signature": "TimingIssue_DemoShop__article_how-to-test",
+    "cleanedMessage": "locator.click: Target page navigated before click completed",
+    "salientTokens": [
+      "timingissue",
+      "demoshop",
+      "articlehow-to-test",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.favorite-btn",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<button class=\"btn btn-sm btn-outline-primary\"><i class=\"ion-heart\"></i> Favorite</button>",
+    "parentTag": "button",
+    "computedStyles": {
+      "visibility": "hidden",
+      "display": "block",
+      "opacity": "0",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 55,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "71a60386f762e508173749bc5adbe77ee8cc5b705fc6c083dbd06f4798d01556",
+    "storagePath": "media/screenshots/fail_0a3a9b69.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_0a3a9b69.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "locator.click: Target page navigated before click completed",
+      "timestamp": "2026-11-07T21:31:38.243643+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3000/article/how-to-test",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TimingIssue",
+  "remediationRecommendation": "Automated guidance for TimingIssue in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.243646+00:00",
+    "notes": "Harvested telemetry for TimingIssue in DemoShop",
+    "tags": [
+      "timingissue",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.243650+00:00"
+    }
+  }
+}

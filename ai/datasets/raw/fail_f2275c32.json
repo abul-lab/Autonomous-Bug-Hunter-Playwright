@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_f2275c32",
+  "timestamp": "2026-11-07T21:31:38.274500+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/cart",
+    "title": "DemoHotel - TestDataFailure",
+    "routePattern": "/cart"
+  },
+  "route": "/cart",
+  "workflow": {
+    "journeyId": "journey_demohotel_testdatafailure",
+    "name": "DemoHotel TestDataFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "AssertionError: Expected item 'Vintage Leather Jacket' in stock, but received 'Sold Out' (stock fixture depletion)",
+  "normalizedError": {
+    "signature": "TestDataFailure_DemoHotel__cart",
+    "cleanedMessage": "AssertionError: Expected item 'Vintage Leather Jacket' in stock, but received 'Sold Out' (stock fixture depletion)",
+    "salientTokens": [
+      "testdatafailure",
+      "demohotel",
+      "cart",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<span class=\"out-of-stock\">Out of stock</span>",
+    "parentTag": "span",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 39,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "d1688e8335ed20049196eb7881257afe780b40dbe69906494290a3371a5c9768",
+    "storagePath": "media/screenshots/fail_f2275c32.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_f2275c32.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "AssertionError: Expected item 'Vintage Leather Jacket' in stock, but received 'Sold Out' (stock fixture depletion)",
+      "timestamp": "2026-11-07T21:31:38.274519+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/cart",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TestDataFailure",
+  "remediationRecommendation": "Automated guidance for TestDataFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.274525+00:00",
+    "notes": "Harvested telemetry for TestDataFailure in DemoHotel",
+    "tags": [
+      "testdatafailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.274529+00:00"
+    }
+  }
+}

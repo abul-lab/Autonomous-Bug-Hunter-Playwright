@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_3ba1ae56",
+  "timestamp": "2026-11-07T21:31:38.262418+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/api/tags",
+    "title": "Conduit - EnvironmentFailure",
+    "routePattern": "/api/tags"
+  },
+  "route": "/api/tags",
+  "workflow": {
+    "journeyId": "journey_conduit_environmentfailure",
+    "name": "Conduit EnvironmentFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "504 Gateway Timeout: Upstream conduit-backend service did not respond within 30000ms",
+  "normalizedError": {
+    "signature": "EnvironmentFailure_Conduit__api_tags",
+    "cleanedMessage": "504 Gateway Timeout: Upstream conduit-backend service did not respond within 30000ms",
+    "salientTokens": [
+      "environmentfailure",
+      "conduit",
+      "apitags",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"error-msg\">504 Gateway Timeout</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 55,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "42d022ca5daa4b31f3fc09727a1e2c437d2a095473f54f0c64cb12f5db1d326c",
+    "storagePath": "media/screenshots/fail_3ba1ae56.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_3ba1ae56.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "504 Gateway Timeout: Upstream conduit-backend service did not respond within 30000ms",
+      "timestamp": "2026-11-07T21:31:38.262440+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3002/api/tags",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "EnvironmentFailure",
+  "remediationRecommendation": "Automated guidance for EnvironmentFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.262444+00:00",
+    "notes": "Harvested telemetry for EnvironmentFailure in Conduit",
+    "tags": [
+      "environmentfailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.262447+00:00"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_f8c33f38",
+  "timestamp": "2026-11-07T21:31:38.270447+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/api/bookings/reserve",
+    "title": "Conduit - BackendApiFailure",
+    "routePattern": "/api/bookings/reserve"
+  },
+  "route": "/api/bookings/reserve",
+  "workflow": {
+    "journeyId": "journey_conduit_backendapifailure",
+    "name": "Conduit BackendApiFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 500: System.NullReferenceException: Object reference not set to an instance of an object at HotelController.cs:line 89",
+  "normalizedError": {
+    "signature": "BackendApiFailure_Conduit__api_bookings_reserve",
+    "cleanedMessage": "Request failed with status code 500: System.NullReferenceException: Object reference not set to an instance of an object at HotelController.cs:line 89",
+    "salientTokens": [
+      "backendapifailure",
+      "conduit",
+      "apibookingsreserve",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"alert alert-danger\">An unexpected server error occurred.</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 53,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "f3e13281fdb9b007ba1992a104f3e1c791db4c4b15f69adcc3d7f201ff989f0e",
+    "storagePath": "media/screenshots/fail_f8c33f38.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_f8c33f38.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "Request failed with status code 500: System.NullReferenceException: Object reference not set to an instance of an object at HotelController.cs:line 89",
+      "timestamp": "2026-11-07T21:31:38.270464+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3002/api/bookings/reserve",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "BackendApiFailure",
+  "remediationRecommendation": "Automated guidance for BackendApiFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.270468+00:00",
+    "notes": "Harvested telemetry for BackendApiFailure in Conduit",
+    "tags": [
+      "backendapifailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.270471+00:00"
+    }
+  }
+}

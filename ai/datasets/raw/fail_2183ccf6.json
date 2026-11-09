@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_2183ccf6",
+  "timestamp": "2026-11-07T21:31:38.227208+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/checkout/review",
+    "title": "Conduit - TimingIssue",
+    "routePattern": "/checkout/review"
+  },
+  "route": "/checkout/review",
+  "workflow": {
+    "journeyId": "journey_conduit_timingissue",
+    "name": "Conduit TimingIssue Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "locator.click: Target closed.\nwaiting for locator('button#place-order') - element is detached from DOM",
+  "normalizedError": {
+    "signature": "TimingIssue_Conduit__checkout_review",
+    "cleanedMessage": "locator.click: Target closed.",
+    "salientTokens": [
+      "timingissue",
+      "conduit",
+      "checkoutreview",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button#place-order",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<button id=\"place-order\" class=\"btn disabled\">Processing...</button>",
+    "parentTag": "button",
+    "computedStyles": {
+      "visibility": "hidden",
+      "display": "block",
+      "opacity": "0",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 35,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "72018d985d167c4bfead195ea7dc71525555f8a6baca8e0ea8e520575bdf1d35",
+    "storagePath": "media/screenshots/fail_2183ccf6.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_2183ccf6.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "locator.click: Target closed.",
+      "timestamp": "2026-11-07T21:31:38.227227+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3002/checkout/review",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TimingIssue",
+  "remediationRecommendation": "Automated guidance for TimingIssue in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.227231+00:00",
+    "notes": "Harvested telemetry for TimingIssue in Conduit",
+    "tags": [
+      "timingissue",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.227233+00:00"
+    }
+  }
+}

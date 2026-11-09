@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_6de6e57a",
+  "timestamp": "2026-11-07T21:31:38.271721+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/api/cart/tax",
+    "title": "DemoHotel - BackendApiFailure",
+    "routePattern": "/api/cart/tax"
+  },
+  "route": "/api/cart/tax",
+  "workflow": {
+    "journeyId": "journey_demohotel_backendapifailure",
+    "name": "DemoHotel BackendApiFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 500: ZeroDivisionError: integer division or modulo by zero in tax calculator module",
+  "normalizedError": {
+    "signature": "BackendApiFailure_DemoHotel__api_cart_tax",
+    "cleanedMessage": "Request failed with status code 500: ZeroDivisionError: integer division or modulo by zero in tax calculator module",
+    "salientTokens": [
+      "backendapifailure",
+      "demohotel",
+      "apicarttax",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<span class=\"error\">Failed to calculate tax</span>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 57,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "189c5cb31a1dae9ad96ebd0c04e6c5dd9dc833c7a8813ef0dbd881d07687393a",
+    "storagePath": "media/screenshots/fail_6de6e57a.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_6de6e57a.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "Request failed with status code 500: ZeroDivisionError: integer division or modulo by zero in tax calculator module",
+      "timestamp": "2026-11-07T21:31:38.271751+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3001/api/cart/tax",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "BackendApiFailure",
+  "remediationRecommendation": "Automated guidance for BackendApiFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.271756+00:00",
+    "notes": "Harvested telemetry for BackendApiFailure in DemoHotel",
+    "tags": [
+      "backendapifailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.271761+00:00"
+    }
+  }
+}

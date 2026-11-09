@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_c3b18917",
+  "timestamp": "2026-11-07T21:31:38.223557+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/search",
+    "title": "Conduit - LocatorDrift",
+    "routePattern": "/search"
+  },
+  "route": "/search",
+  "workflow": {
+    "journeyId": "journey_conduit_locatordrift",
+    "name": "Conduit LocatorDrift Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Timeout 30000ms exceeded waiting for locator('input#search-query')",
+  "normalizedError": {
+    "signature": "LocatorDrift_Conduit__search",
+    "cleanedMessage": "Timeout 30000ms exceeded waiting for locator('input#search-query')",
+    "salientTokens": [
+      "locatordrift",
+      "conduit",
+      "search",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "input#search-query",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<input data-testid=\"catalog-search\" placeholder=\"Search products...\" />",
+    "parentTag": "input",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 49,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "f576ea9867730ff003f2d9db04c2fdf20b561d3316447b1d1baebe7a11202215",
+    "storagePath": "media/screenshots/fail_c3b18917.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_c3b18917.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "Timeout 30000ms exceeded waiting for locator('input#search-query')",
+      "timestamp": "2026-11-07T21:31:38.223574+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3002/search",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "LocatorDrift",
+  "remediationRecommendation": "Automated guidance for LocatorDrift in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.223577+00:00",
+    "notes": "Harvested telemetry for LocatorDrift in Conduit",
+    "tags": [
+      "locatordrift",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.223580+00:00"
+    }
+  }
+}

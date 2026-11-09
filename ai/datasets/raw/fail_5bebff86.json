@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_5bebff86",
+  "timestamp": "2026-11-07T21:31:38.272727+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/register",
+    "title": "Conduit - TestDataFailure",
+    "routePattern": "/register"
+  },
+  "route": "/register",
+  "workflow": {
+    "journeyId": "journey_conduit_testdatafailure",
+    "name": "Conduit TestDataFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "AssertionError: Expected registration success but received 'User already exists: staff_qa@demotest.com'",
+  "normalizedError": {
+    "signature": "TestDataFailure_Conduit__register",
+    "cleanedMessage": "AssertionError: Expected registration success but received 'User already exists: staff_qa@demotest.com'",
+    "salientTokens": [
+      "testdatafailure",
+      "conduit",
+      "register",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "input#email",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"error-messages\"><li>email has already been taken</li></div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 35,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "d986b6e1ddb23d750fb9f7dd6b9c805a360ef5005b71d7378da6842509f5d436",
+    "storagePath": "media/screenshots/fail_5bebff86.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_5bebff86.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "AssertionError: Expected registration success but received 'User already exists: staff_qa@demotest.com'",
+      "timestamp": "2026-11-07T21:31:38.272765+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3002/register",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TestDataFailure",
+  "remediationRecommendation": "Automated guidance for TestDataFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.272772+00:00",
+    "notes": "Harvested telemetry for TestDataFailure in Conduit",
+    "tags": [
+      "testdatafailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.272781+00:00"
+    }
+  }
+}

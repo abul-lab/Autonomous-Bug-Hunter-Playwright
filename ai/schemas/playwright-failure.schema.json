@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity.qe/schemas/pfd-v1.0.json",
+  "title": "PlaywrightFailureRecord",
+  "description": "Canonical schema for Playwright Failure Dataset (PFD-v1.0) for ML training and failure intelligence.",
+  "type": "object",
+  "required": [
+    "failureId",
+    "timestamp",
+    "browser",
+    "page",
+    "route",
+    "errorMessage",
+    "normalizedError",
+    "rootCauseCategory",
+    "verificationStatus"
+  ],
+  "properties": {
+    "failureId": {
+      "type": "string",
+      "pattern": "^fail_[a-zA-Z0-9_-]{8,32}$",
+      "description": "Unique deterministic identifier for the failure instance."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of execution."
+    },
+    "browser": {
+      "type": "object",
+      "required": ["name", "version", "viewport", "os"],
+      "properties": {
+        "name": { "type": "string", "enum": ["chromium", "firefox", "webkit"] },
+        "version": { "type": "string" },
+        "viewport": {
+          "type": "object",
+          "required": ["width", "height"],
+          "properties": {
+            "width": { "type": "integer" },
+            "height": { "type": "integer" }
+          }
+        },
+        "os": { "type": "string" }
+      }
+    },
+    "page": {
+      "type": "object",
+      "required": ["url", "title"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string" },
+        "routePattern": { "type": "string" }
+      }
+    },
+    "route": {
+      "type": "string",
+      "description": "Normalized parameterized route pattern (e.g. /shop/checkout/:id)."
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "journeyId": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "stepIndex": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "errorMessage": {
+      "type": "string",
+      "description": "Raw un-truncated Playwright exception string."
+    },
+    "normalizedError": {
+      "type": "object",
+      "required": ["signature", "cleanedMessage", "salientTokens"],
+      "properties": {
+        "signature": { "type": "string" },
+        "cleanedMessage": { "type": "string" },
+        "salientTokens": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "stackTrace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "line", "method"],
+        "properties": {
+          "file": { "type": "string" },
+          "line": { "type": "integer" },
+          "column": { "type": "integer" },
+          "method": { "type": "string" }
+        }
+      }
+    },
+    "screenshotMetadata": {
+      "type": "object",
+      "properties": {
+        "sha256": { "type": "string" },
+        "storagePath": { "type": "string" },
+        "dimensions": { "type": "string" },
+        "mimeType": { "type": "string" }
+      }
+    },
+    "traceMetadata": {
+      "type": "object",
+      "properties": {
+        "traceZipPath": { "type": "string" },
+        "actionsCount": { "type": "integer" },
+        "networkRequestsCount": { "type": "integer" }
+      }
+    },
+    "consoleLogs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["level", "text"],
+        "properties": {
+          "level": { "type": "string", "enum": ["error", "warning", "info", "log"] },
+          "text": { "type": "string" },
+          "timestamp": { "type": "string" }
+        }
+      }
+    },
+    "networkSummary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["method", "url", "statusCode"],
+        "properties": {
+          "method": { "type": "string" },
+          "url": { "type": "string" },
+          "statusCode": { "type": "integer" },
+          "durationMs": { "type": "number" },
+          "errorText": { "type": "string" }
+        }
+      }
+    },
+    "environmentInfo": {
+      "type": "object",
+      "properties": {
+        "ciProvider": { "type": "string" },
+        "nodeVersion": { "type": "string" },
+        "playwrightVersion": { "type": "string" },
+        "targetHost": { "type": "string" },
+        "gitCommit": { "type": "string" },
+        "gitBranch": { "type": "string" }
+      }
+    },
+    "rootCauseCategory": {
+      "type": "string",
+      "enum": [
+        "LocatorDrift",
+        "TimingIssue",
+        "AuthenticationFailure",
+        "EnvironmentFailure",
+        "BackendApiFailure",
+        "TestDataFailure",
+        "VisualRegression",
+        "AssertionFailure",
+        "Unknown"
+      ]
+    },
+    "remediationRecommendation": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "verificationStatus": {
+      "type": "string",
+      "enum": ["unverified", "ai_proposed", "human_verified", "rejected", "quarantined"]
+    },
+    "curationMetadata": {
+      "type": "object",
+      "properties": {
+        "reviewedBy": { "type": "string" },
+        "reviewedAt": { "type": "string", "format": "date-time" },
+        "notes": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
+

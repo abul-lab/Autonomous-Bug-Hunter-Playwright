@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_c8afb055",
+  "timestamp": "2026-11-07T21:31:38.226629+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/cart",
+    "title": "DemoHotel - LocatorDrift",
+    "routePattern": "/cart"
+  },
+  "route": "/cart",
+  "workflow": {
+    "journeyId": "journey_demohotel_locatordrift",
+    "name": "DemoHotel LocatorDrift Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "Timeout 30000ms exceeded waiting for locator('#checkout-btn')",
+  "normalizedError": {
+    "signature": "LocatorDrift_DemoHotel__cart",
+    "cleanedMessage": "Timeout 30000ms exceeded waiting for locator('#checkout-btn')",
+    "salientTokens": [
+      "locatordrift",
+      "demohotel",
+      "cart",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "#checkout-btn",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<button data-testid=\"checkout-v2\" class=\"btn-primary\">Checkout Now</button>",
+    "parentTag": "button",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 59,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "08ff32250581ca5a41653fac3c0ad77cc261fe2c11d7b45093bdc5d9a0abc7c4",
+    "storagePath": "media/screenshots/fail_c8afb055.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_c8afb055.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "Timeout 30000ms exceeded waiting for locator('#checkout-btn')",
+      "timestamp": "2026-11-07T21:31:38.226645+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/cart",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "LocatorDrift",
+  "remediationRecommendation": "Automated guidance for LocatorDrift in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.226648+00:00",
+    "notes": "Harvested telemetry for LocatorDrift in DemoHotel",
+    "tags": [
+      "locatordrift",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.226651+00:00"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_a964c76e",
+  "timestamp": "2026-11-07T21:31:38.261841+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/api/hotel/rooms",
+    "title": "DemoHotel - EnvironmentFailure",
+    "routePattern": "/api/hotel/rooms"
+  },
+  "route": "/api/hotel/rooms",
+  "workflow": {
+    "journeyId": "journey_demohotel_environmentfailure",
+    "name": "DemoHotel EnvironmentFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "502 Bad Gateway: Nginx reverse proxy failed to connect to upstream service :5001",
+  "normalizedError": {
+    "signature": "EnvironmentFailure_DemoHotel__api_hotel_rooms",
+    "cleanedMessage": "502 Bad Gateway: Nginx reverse proxy failed to connect to upstream service :5001",
+    "salientTokens": [
+      "environmentfailure",
+      "demohotel",
+      "apihotelrooms",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<html><head><title>502 Bad Gateway</title></head><body>nginx/1.24.0</body></html>",
+    "parentTag": "html",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 53,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "6778a78e7223cbef9fb0190470cf92ef138f82e80192a580a1f6ef0b50f239d1",
+    "storagePath": "media/screenshots/fail_a964c76e.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_a964c76e.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "502 Bad Gateway: Nginx reverse proxy failed to connect to upstream service :5001",
+      "timestamp": "2026-11-07T21:31:38.261856+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3001/api/hotel/rooms",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "EnvironmentFailure",
+  "remediationRecommendation": "Automated guidance for EnvironmentFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.261860+00:00",
+    "notes": "Harvested telemetry for EnvironmentFailure in DemoHotel",
+    "tags": [
+      "environmentfailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.261863+00:00"
+    }
+  }
+}

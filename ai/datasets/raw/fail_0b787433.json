@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_0b787433",
+  "timestamp": "2026-11-07T21:31:38.256406+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/api/hotel/rooms",
+    "title": "Conduit - EnvironmentFailure",
+    "routePattern": "/api/hotel/rooms"
+  },
+  "route": "/api/hotel/rooms",
+  "workflow": {
+    "journeyId": "journey_conduit_environmentfailure",
+    "name": "Conduit EnvironmentFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "502 Bad Gateway: Nginx reverse proxy failed to connect to upstream service :5001",
+  "normalizedError": {
+    "signature": "EnvironmentFailure_Conduit__api_hotel_rooms",
+    "cleanedMessage": "502 Bad Gateway: Nginx reverse proxy failed to connect to upstream service :5001",
+    "salientTokens": [
+      "environmentfailure",
+      "conduit",
+      "apihotelrooms",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<html><head><title>502 Bad Gateway</title></head><body>nginx/1.24.0</body></html>",
+    "parentTag": "html",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 37,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "ad2cf77db1302cd03afa9d40afb134da3f7fff82fe97a89a61469145915b2296",
+    "storagePath": "media/screenshots/fail_0b787433.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_0b787433.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "502 Bad Gateway: Nginx reverse proxy failed to connect to upstream service :5001",
+      "timestamp": "2026-11-07T21:31:38.256619+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3002/api/hotel/rooms",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "EnvironmentFailure",
+  "remediationRecommendation": "Automated guidance for EnvironmentFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.256625+00:00",
+    "notes": "Harvested telemetry for EnvironmentFailure in Conduit",
+    "tags": [
+      "environmentfailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.256628+00:00"
+    }
+  }
+}

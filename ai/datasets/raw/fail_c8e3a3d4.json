@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_c8e3a3d4",
+  "timestamp": "2026-11-07T21:31:38.291521+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/checkout",
+    "title": "Conduit - AssertionFailure",
+    "routePattern": "/checkout"
+  },
+  "route": "/checkout",
+  "workflow": {
+    "journeyId": "journey_conduit_assertionfailure",
+    "name": "Conduit AssertionFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "AssertionError: expect(taxCalculation).toBe(8.25)\nReceived: 8.50 (Rounding rule tax-bankers-rounding failed)",
+  "normalizedError": {
+    "signature": "AssertionFailure_Conduit__checkout",
+    "cleanedMessage": "AssertionError: expect(taxCalculation).toBe(8.25)",
+    "salientTokens": [
+      "assertionfailure",
+      "conduit",
+      "checkout",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<span id=\"tax-amount\">$8.50</span>",
+    "parentTag": "span",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 41,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "54e4cea7c11980eca4e0b353921545de13de59a08660c62de7e387bd0cfe2d23",
+    "storagePath": "media/screenshots/fail_c8e3a3d4.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_c8e3a3d4.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "AssertionError: expect(taxCalculation).toBe(8.25)",
+      "timestamp": "2026-11-07T21:31:38.291537+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3002/checkout",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "AssertionFailure",
+  "remediationRecommendation": "Automated guidance for AssertionFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.291541+00:00",
+    "notes": "Harvested telemetry for AssertionFailure in Conduit",
+    "tags": [
+      "assertionfailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.291544+00:00"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_0eb538eb",
+  "timestamp": "2026-11-07T21:31:38.282546+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/",
+    "title": "DemoHotel - VisualRegression",
+    "routePattern": "/"
+  },
+  "route": "/",
+  "workflow": {
+    "journeyId": "journey_demohotel_visualregression",
+    "name": "DemoHotel VisualRegression Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "expect(page).toHaveScreenshot() failed: 890 pixels differ (3.2% deviation) - font rendering mismatch on Roboto-Bold",
+  "normalizedError": {
+    "signature": "VisualRegression_DemoHotel__",
+    "cleanedMessage": "expect(page).toHaveScreenshot() failed: 890 pixels differ (3.2% deviation) - font rendering mismatch on Roboto-Bold",
+    "salientTokens": [
+      "visualregression",
+      "demohotel",
+      "home",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"banner\"><h1>conduit</h1><p>A place to share knowledge.</p></div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 39,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "055897d5ae4458492b83725285b3e4711f779153fa805e9d4476ff66b6ff08a6",
+    "storagePath": "media/screenshots/fail_0eb538eb.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_0eb538eb.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "expect(page).toHaveScreenshot() failed: 890 pixels differ (3.2% deviation) - font rendering mismatch on Roboto-Bold",
+      "timestamp": "2026-11-07T21:31:38.282562+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "VisualRegression",
+  "remediationRecommendation": "Automated guidance for VisualRegression in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.282566+00:00",
+    "notes": "Harvested telemetry for VisualRegression in DemoHotel",
+    "tags": [
+      "visualregression",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.282569+00:00"
+    }
+  }
+}

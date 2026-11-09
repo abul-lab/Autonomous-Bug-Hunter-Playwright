@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_e9b112ee",
+  "timestamp": "2026-11-07T21:31:38.228448+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/article/how-to-test",
+    "title": "DemoHotel - TimingIssue",
+    "routePattern": "/article/how-to-test"
+  },
+  "route": "/article/how-to-test",
+  "workflow": {
+    "journeyId": "journey_demohotel_timingissue",
+    "name": "DemoHotel TimingIssue Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "locator.click: Target page navigated before click completed",
+  "normalizedError": {
+    "signature": "TimingIssue_DemoHotel__article_how-to-test",
+    "cleanedMessage": "locator.click: Target page navigated before click completed",
+    "salientTokens": [
+      "timingissue",
+      "demohotel",
+      "articlehow-to-test",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.favorite-btn",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<button class=\"btn btn-sm btn-outline-primary\"><i class=\"ion-heart\"></i> Favorite</button>",
+    "parentTag": "button",
+    "computedStyles": {
+      "visibility": "hidden",
+      "display": "block",
+      "opacity": "0",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 39,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "bf9f70f5e13b8e5d7a0953de3f090f8c8f3d0bd2292405f4c33719477cc58cb3",
+    "storagePath": "media/screenshots/fail_e9b112ee.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_e9b112ee.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "locator.click: Target page navigated before click completed",
+      "timestamp": "2026-11-07T21:31:38.228468+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/article/how-to-test",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TimingIssue",
+  "remediationRecommendation": "Automated guidance for TimingIssue in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.228472+00:00",
+    "notes": "Harvested telemetry for TimingIssue in DemoHotel",
+    "tags": [
+      "timingissue",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.228475+00:00"
+    }
+  }
+}

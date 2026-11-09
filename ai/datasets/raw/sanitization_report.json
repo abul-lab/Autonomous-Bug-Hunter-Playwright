@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-11-07T21:32:00.896763+00:00",
+  "inputSource": "ai\\datasets\\raw\\harvested_100_raw.jsonl",
+  "outputTarget": "ai\\datasets\\raw\\sanitized_100.jsonl",
+  "totalRecordsScanned": 100,
+  "piiScanResults": {
+    "status": "REDACTED_AND_CLEAN",
+    "redactionsApplied": 6,
+    "patternsChecked": [
+      "EMAIL",
+      "IPV4",
+      "CREDIT_CARD",
+      "PHONE"
+    ]
+  },
+  "secretScanResults": {
+    "status": "PASSED",
+    "secretsDetectedAndRedacted": 0,
+    "patternsChecked": [
+      "JWT",
+      "BEARER_TOKEN",
+      "API_KEY",
+      "CONNECTION_STRING"
+    ]
+  },
+  "governanceApproval": {
+    "approvedForTraining": true,
+    "zeroSecretsVerified": true,
+    "zeroPiiVerified": true
+  }
+}

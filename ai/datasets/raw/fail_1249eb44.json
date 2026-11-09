@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_1249eb44",
+  "timestamp": "2026-11-07T21:31:38.222922+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/editor",
+    "title": "DemoHotel - LocatorDrift",
+    "routePattern": "/editor"
+  },
+  "route": "/editor",
+  "workflow": {
+    "journeyId": "journey_demohotel_locatordrift",
+    "name": "DemoHotel LocatorDrift Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "Timeout 30000ms exceeded waiting for locator('button.publish-article')",
+  "normalizedError": {
+    "signature": "LocatorDrift_DemoHotel__editor",
+    "cleanedMessage": "Timeout 30000ms exceeded waiting for locator('button.publish-article')",
+    "salientTokens": [
+      "locatordrift",
+      "demohotel",
+      "editor",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.publish-article",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<button data-testid=\"publish-btn\" class=\"btn btn-lg\">Publish Article</button>",
+    "parentTag": "button",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 47,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "9ef1926dcfc8d0469dc993cb47c9ec1e44f8fce4a1015a191d4f11a182946431",
+    "storagePath": "media/screenshots/fail_1249eb44.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_1249eb44.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "Timeout 30000ms exceeded waiting for locator('button.publish-article')",
+      "timestamp": "2026-11-07T21:31:38.222942+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/editor",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "LocatorDrift",
+  "remediationRecommendation": "Automated guidance for LocatorDrift in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.222946+00:00",
+    "notes": "Harvested telemetry for LocatorDrift in DemoHotel",
+    "tags": [
+      "locatordrift",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.222951+00:00"
+    }
+  }
+}

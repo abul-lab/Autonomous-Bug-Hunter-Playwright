@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_4000ba2d",
+  "timestamp": "2026-11-07T21:31:38.264402+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/api/orders",
+    "title": "Conduit - BackendApiFailure",
+    "routePattern": "/api/orders"
+  },
+  "route": "/api/orders",
+  "workflow": {
+    "journeyId": "journey_conduit_backendapifailure",
+    "name": "Conduit BackendApiFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 500 Internal Server Error: Npgsql.PostgresException: 40P01: deadlock detected on table 'order_items'",
+  "normalizedError": {
+    "signature": "BackendApiFailure_Conduit__api_orders",
+    "cleanedMessage": "Request failed with status code 500 Internal Server Error: Npgsql.PostgresException: 40P01: deadlock detected on table 'order_items'",
+    "salientTokens": [
+      "backendapifailure",
+      "conduit",
+      "apiorders",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"toast-error\">Internal Server Error: 500</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 35,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "6ab0b817fc5875f2de0eee74eaa066793d5bc373302634f0ec1366308e87b3b1",
+    "storagePath": "media/screenshots/fail_4000ba2d.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_4000ba2d.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "Request failed with status code 500 Internal Server Error: Npgsql.PostgresException: 40P01: deadlock detected on table 'order_items'",
+      "timestamp": "2026-11-07T21:31:38.264427+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3002/api/orders",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "BackendApiFailure",
+  "remediationRecommendation": "Automated guidance for BackendApiFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.264432+00:00",
+    "notes": "Harvested telemetry for BackendApiFailure in Conduit",
+    "tags": [
+      "backendapifailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.264435+00:00"
+    }
+  }
+}
