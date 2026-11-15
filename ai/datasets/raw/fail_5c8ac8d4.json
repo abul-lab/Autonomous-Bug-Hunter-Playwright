@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_5c8ac8d4",
+  "timestamp": "2026-11-07T21:31:38.288198+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/",
+    "title": "DemoShop - VisualRegression",
+    "routePattern": "/"
+  },
+  "route": "/",
+  "workflow": {
+    "journeyId": "journey_demoshop_visualregression",
+    "name": "DemoShop VisualRegression Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "expect(page).toHaveScreenshot() failed: 890 pixels differ (3.2% deviation) - font rendering mismatch on Roboto-Bold",
+  "normalizedError": {
+    "signature": "VisualRegression_DemoShop__",
+    "cleanedMessage": "expect(page).toHaveScreenshot() failed: 890 pixels differ (3.2% deviation) - font rendering mismatch on Roboto-Bold",
+    "salientTokens": [
+      "visualregression",
+      "demoshop",
+      "home",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"banner\"><h1>conduit</h1><p>A place to share knowledge.</p></div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 55,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "69918b641d38323406329238c6dd61c737a4e6851367131b8537383b3c4cbbc0",
+    "storagePath": "media/screenshots/fail_5c8ac8d4.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_5c8ac8d4.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "expect(page).toHaveScreenshot() failed: 890 pixels differ (3.2% deviation) - font rendering mismatch on Roboto-Bold",
+      "timestamp": "2026-11-07T21:31:38.288216+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3000/",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "VisualRegression",
+  "remediationRecommendation": "Automated guidance for VisualRegression in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.288220+00:00",
+    "notes": "Harvested telemetry for VisualRegression in DemoShop",
+    "tags": [
+      "visualregression",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.288227+00:00"
+    }
+  }
+}

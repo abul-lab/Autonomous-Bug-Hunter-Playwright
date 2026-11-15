@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_8acd5d3c",
+  "timestamp": "2026-11-07T21:31:38.257298+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/api/tags",
+    "title": "DemoShop - EnvironmentFailure",
+    "routePattern": "/api/tags"
+  },
+  "route": "/api/tags",
+  "workflow": {
+    "journeyId": "journey_demoshop_environmentfailure",
+    "name": "DemoShop EnvironmentFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "504 Gateway Timeout: Upstream conduit-backend service did not respond within 30000ms",
+  "normalizedError": {
+    "signature": "EnvironmentFailure_DemoShop__api_tags",
+    "cleanedMessage": "504 Gateway Timeout: Upstream conduit-backend service did not respond within 30000ms",
+    "salientTokens": [
+      "environmentfailure",
+      "demoshop",
+      "apitags",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"error-msg\">504 Gateway Timeout</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 39,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "95a39d5b592a37acf60ef130b2ec480f5503fd3a492cb69812a2bcc42b3fc642",
+    "storagePath": "media/screenshots/fail_8acd5d3c.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_8acd5d3c.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "504 Gateway Timeout: Upstream conduit-backend service did not respond within 30000ms",
+      "timestamp": "2026-11-07T21:31:38.257315+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3000/api/tags",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "EnvironmentFailure",
+  "remediationRecommendation": "Automated guidance for EnvironmentFailure in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.257319+00:00",
+    "notes": "Harvested telemetry for EnvironmentFailure in DemoShop",
+    "tags": [
+      "environmentfailure",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.257322+00:00"
+    }
+  }
+}

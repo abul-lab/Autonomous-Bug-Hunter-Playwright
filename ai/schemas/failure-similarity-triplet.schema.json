@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity.qe/schemas/failure-similarity-triplet-v1.0.json",
+  "title": "FailureSimilarityTriplet",
+  "description": "Schema for metric learning and contrastive embedding fine-tuning on Playwright failures.",
+  "type": "object",
+  "required": [
+    "tripletId",
+    "anchorFailureId",
+    "positiveFailureId",
+    "negativeFailureId",
+    "category",
+    "similarityScore",
+    "contrastiveRationale"
+  ],
+  "properties": {
+    "tripletId": {
+      "type": "string",
+      "pattern": "^trip_[a-zA-Z0-9_-]{8,32}$"
+    },
+    "anchorFailureId": { "type": "string" },
+    "positiveFailureId": { "type": "string" },
+    "negativeFailureId": { "type": "string" },
+    "category": { "type": "string" },
+    "similarityScore": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Ground truth similarity between anchor and positive (usually >= 0.85)."
+    },
+    "contrastiveRationale": {
+      "type": "string",
+      "description": "Explanation of why negative is distinct (hard negative discrimination rationale)."
+    },
+    "hardNegativeType": {
+      "type": "string",
+      "enum": ["same_error_different_root_cause", "same_page_different_error", "timing_vs_locator", "auth_vs_backend"]
+    }
+  }
+}
+

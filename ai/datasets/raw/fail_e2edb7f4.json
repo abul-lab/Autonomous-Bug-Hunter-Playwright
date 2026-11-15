@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_e2edb7f4",
+  "timestamp": "2026-11-07T21:31:38.277043+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/hotel/booking",
+    "title": "DemoHotel - TestDataFailure",
+    "routePattern": "/hotel/booking"
+  },
+  "route": "/hotel/booking",
+  "workflow": {
+    "journeyId": "journey_demohotel_testdatafailure",
+    "name": "DemoHotel TestDataFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "AssertionError: Room #104 status expected 'available', but found 'occupied' (stale fixture data from previous test run)",
+  "normalizedError": {
+    "signature": "TestDataFailure_DemoHotel__hotel_booking",
+    "cleanedMessage": "AssertionError: Room #104 status expected 'available', but found 'occupied' (stale fixture data from previous test run)",
+    "salientTokens": [
+      "testdatafailure",
+      "demohotel",
+      "hotelbooking",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<span class=\"badge badge-danger\">Occupied</span>",
+    "parentTag": "span",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 45,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "344204f7782adf2f2fbf619a3bf566700a67d0fdb28b4ce079f5e11c2a5116a2",
+    "storagePath": "media/screenshots/fail_e2edb7f4.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_e2edb7f4.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "AssertionError: Room #104 status expected 'available', but found 'occupied' (stale fixture data from previous test run)",
+      "timestamp": "2026-11-07T21:31:38.277059+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/hotel/booking",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TestDataFailure",
+  "remediationRecommendation": "Automated guidance for TestDataFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.277064+00:00",
+    "notes": "Harvested telemetry for TestDataFailure in DemoHotel",
+    "tags": [
+      "testdatafailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.277067+00:00"
+    }
+  }
+}

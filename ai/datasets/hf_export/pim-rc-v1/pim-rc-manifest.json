@@ -1,0 +1,47 @@
+{
+  "modelName": "PIM-RC-v1",
+  "backbone": "answerdotai/ModernBERT-base",
+  "datasetVersion": "PFD-v1.0",
+  "datasetCounts": {
+    "train": 75,
+    "val": 12,
+    "test": 13
+  },
+  "metrics": {
+    "accuracy": 0.2308,
+    "precision": 0.2,
+    "recall": 0.2,
+    "macroF1": 0.2
+  },
+  "classes": [
+    "AssertionFailure",
+    "AuthenticationFailure",
+    "BackendApiFailure",
+    "EnvironmentFailure",
+    "LocatorDrift",
+    "TestDataFailure",
+    "TimingIssue",
+    "VisualRegression"
+  ],
+  "label2id": {
+    "AssertionFailure": 0,
+    "AuthenticationFailure": 1,
+    "BackendApiFailure": 2,
+    "EnvironmentFailure": 3,
+    "LocatorDrift": 4,
+    "TestDataFailure": 5,
+    "TimingIssue": 6,
+    "VisualRegression": 7
+  },
+  "id2label": {
+    "0": "AssertionFailure",
+    "1": "AuthenticationFailure",
+    "2": "BackendApiFailure",
+    "3": "EnvironmentFailure",
+    "4": "LocatorDrift",
+    "5": "TestDataFailure",
+    "6": "TimingIssue",
+    "7": "VisualRegression"
+  },
+  "trainedAt": "2026-11-07T22:19:53.868311+00:00"
+}

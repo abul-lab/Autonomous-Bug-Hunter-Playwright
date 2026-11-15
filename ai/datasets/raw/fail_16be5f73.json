@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_16be5f73",
+  "timestamp": "2026-11-07T21:31:38.284349+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/hotel/home",
+    "title": "DemoHotel - VisualRegression",
+    "routePattern": "/hotel/home"
+  },
+  "route": "/hotel/home",
+  "workflow": {
+    "journeyId": "journey_demohotel_visualregression",
+    "name": "DemoHotel VisualRegression Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "expect(page).toHaveScreenshot() failed: 420 pixels differ (1.4% deviation) on navigation header",
+  "normalizedError": {
+    "signature": "VisualRegression_DemoHotel__hotel_home",
+    "cleanedMessage": "expect(page).toHaveScreenshot() failed: 420 pixels differ (1.4% deviation) on navigation header",
+    "salientTokens": [
+      "visualregression",
+      "demohotel",
+      "hotelhome",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<nav class=\"navbar navbar-fixed\" style=\"background-color: #1e1b4b;\">...</nav>",
+    "parentTag": "nav",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 45,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "274132b14e06910b44dd6c9a549d1790d0be11c9ba0fcb3a124326743793855c",
+    "storagePath": "media/screenshots/fail_16be5f73.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_16be5f73.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "expect(page).toHaveScreenshot() failed: 420 pixels differ (1.4% deviation) on navigation header",
+      "timestamp": "2026-11-07T21:31:38.284370+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/hotel/home",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "VisualRegression",
+  "remediationRecommendation": "Automated guidance for VisualRegression in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.284376+00:00",
+    "notes": "Harvested telemetry for VisualRegression in DemoHotel",
+    "tags": [
+      "visualregression",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.284380+00:00"
+    }
+  }
+}

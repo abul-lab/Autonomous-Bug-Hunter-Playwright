@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_e5f16c61",
+  "timestamp": "2026-11-07T21:31:38.292721+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/hotel/rooms/luxury",
+    "title": "DemoHotel - AssertionFailure",
+    "routePattern": "/hotel/rooms/luxury"
+  },
+  "route": "/hotel/rooms/luxury",
+  "workflow": {
+    "journeyId": "journey_demohotel_assertionfailure",
+    "name": "DemoHotel AssertionFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "AssertionError: expect(cleaningFeeIncluded).toBe(true)\nReceived: false (Hotel business rule DEMO-122 violated)",
+  "normalizedError": {
+    "signature": "AssertionFailure_DemoHotel__hotel_rooms_luxury",
+    "cleanedMessage": "AssertionError: expect(cleaningFeeIncluded).toBe(true)",
+    "salientTokens": [
+      "assertionfailure",
+      "demohotel",
+      "hotelroomsluxury",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"fee-line\">Cleaning fee: $50.00 (not included)</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 45,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "267c0b3504045281a0d348cb4ad7f68f1317e200d4e3754cf988aa5e160e9ff0",
+    "storagePath": "media/screenshots/fail_e5f16c61.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_e5f16c61.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "AssertionError: expect(cleaningFeeIncluded).toBe(true)",
+      "timestamp": "2026-11-07T21:31:38.292736+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/hotel/rooms/luxury",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "AssertionFailure",
+  "remediationRecommendation": "Automated guidance for AssertionFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.292742+00:00",
+    "notes": "Harvested telemetry for AssertionFailure in DemoHotel",
+    "tags": [
+      "assertionfailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.292747+00:00"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_cfc3d889",
+  "timestamp": "2026-11-07T21:31:38.280732+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/profile/johndoe",
+    "title": "DemoHotel - TestDataFailure",
+    "routePattern": "/profile/johndoe"
+  },
+  "route": "/profile/johndoe",
+  "workflow": {
+    "journeyId": "journey_demohotel_testdatafailure",
+    "name": "DemoHotel TestDataFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 404: User profile 'johndoe' not found (seeded fixture was not reset)",
+  "normalizedError": {
+    "signature": "TestDataFailure_DemoHotel__profile_johndoe",
+    "cleanedMessage": "Request failed with status code 404: User profile 'johndoe' not found (seeded fixture was not reset)",
+    "salientTokens": [
+      "testdatafailure",
+      "demohotel",
+      "profilejohndoe",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div class=\"not-found\">User not found</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 57,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "e636f1e66a06ac525f1154b1cab65ee70278d11e19e56ac026cc2ce971cf5c02",
+    "storagePath": "media/screenshots/fail_cfc3d889.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_cfc3d889.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "Request failed with status code 404: User profile 'johndoe' not found (seeded fixture was not reset)",
+      "timestamp": "2026-11-07T21:31:38.280748+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/profile/johndoe",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "TestDataFailure",
+  "remediationRecommendation": "Automated guidance for TestDataFailure in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.280752+00:00",
+    "notes": "Harvested telemetry for TestDataFailure in DemoHotel",
+    "tags": [
+      "testdatafailure",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.280755+00:00"
+    }
+  }
+}

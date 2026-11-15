@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_2596d625",
+  "timestamp": "2026-11-07T21:31:38.241706+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/cart/shipping",
+    "title": "DemoShop - TimingIssue",
+    "routePattern": "/cart/shipping"
+  },
+  "route": "/cart/shipping",
+  "workflow": {
+    "journeyId": "journey_demoshop_timingissue",
+    "name": "DemoShop TimingIssue Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "locator.waitFor: element is not visible within 5000ms",
+  "normalizedError": {
+    "signature": "TimingIssue_DemoShop__cart_shipping",
+    "cleanedMessage": "locator.waitFor: element is not visible within 5000ms",
+    "salientTokens": [
+      "timingissue",
+      "demoshop",
+      "cartshipping",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "#shipping-calc",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div id=\"shipping-calc\" style=\"opacity: 0; pointer-events: none;\">Calculating...</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "hidden",
+      "display": "block",
+      "opacity": "0",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": false,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 49,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "b164adfa90b68e973cef045b5854693f022c064e59d9343de280268ca4a47d4d",
+    "storagePath": "media/screenshots/fail_2596d625.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_2596d625.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "locator.waitFor: element is not visible within 5000ms",
+      "timestamp": "2026-11-07T21:31:38.241722+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3000/cart/shipping",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "TimingIssue",
+  "remediationRecommendation": "Automated guidance for TimingIssue in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.241726+00:00",
+    "notes": "Harvested telemetry for TimingIssue in DemoShop",
+    "tags": [
+      "timingissue",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.241729+00:00"
+    }
+  }
+}

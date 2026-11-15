@@ -1,0 +1,46 @@
+{
+  "datasetVersion": "PFD-v1.0",
+  "generatedAt": "2026-11-07T21:32:59.607561+00:00",
+  "summary": {
+    "totalFailures": 100,
+    "humanVerifiedCount": 100,
+    "rejectedCount": 0,
+    "approvedForTraining": 100,
+    "approvedForPublicRelease": 100
+  },
+  "splitCounts": {
+    "train": 75,
+    "validation": 12,
+    "test": 13
+  },
+  "categoryDistribution": {
+    "AssertionFailure": 12,
+    "AuthenticationFailure": 13,
+    "BackendApiFailure": 12,
+    "EnvironmentFailure": 13,
+    "LocatorDrift": 13,
+    "TestDataFailure": 12,
+    "TimingIssue": 13,
+    "VisualRegression": 12
+  },
+  "classBalancePercentage": {
+    "AssertionFailure": "12.0%",
+    "AuthenticationFailure": "13.0%",
+    "BackendApiFailure": "12.0%",
+    "EnvironmentFailure": "13.0%",
+    "LocatorDrift": "13.0%",
+    "TestDataFailure": "12.0%",
+    "TimingIssue": "13.0%",
+    "VisualRegression": "12.0%"
+  },
+  "sanitizationAudit": {
+    "piiStatus": "REDACTED_AND_CLEAN",
+    "secretsStatus": "PASSED",
+    "piiRedactionsApplied": 6,
+    "secretsDetected": 0
+  },
+  "leakageAudit": {
+    "crossSplitLeakage": "0 pairs (PASSED)",
+    "leakageMetric": "Jaccard Token Similarity < 0.85"
+  }
+}

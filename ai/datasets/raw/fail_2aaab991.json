@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_2aaab991",
+  "timestamp": "2026-11-07T21:31:38.287493+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/hotel/home",
+    "title": "Conduit - VisualRegression",
+    "routePattern": "/hotel/home"
+  },
+  "route": "/hotel/home",
+  "workflow": {
+    "journeyId": "journey_conduit_visualregression",
+    "name": "Conduit VisualRegression Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "expect(page).toHaveScreenshot() failed: 420 pixels differ (1.4% deviation) on navigation header",
+  "normalizedError": {
+    "signature": "VisualRegression_Conduit__hotel_home",
+    "cleanedMessage": "expect(page).toHaveScreenshot() failed: 420 pixels differ (1.4% deviation) on navigation header",
+    "salientTokens": [
+      "visualregression",
+      "conduit",
+      "hotelhome",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<nav class=\"navbar navbar-fixed\" style=\"background-color: #1e1b4b;\">...</nav>",
+    "parentTag": "nav",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 53,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "a4be7d2645f44907da81900580d0c1b1f26798db2a364f7d643fedba6c26495c",
+    "storagePath": "media/screenshots/fail_2aaab991.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_2aaab991.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "expect(page).toHaveScreenshot() failed: 420 pixels differ (1.4% deviation) on navigation header",
+      "timestamp": "2026-11-07T21:31:38.287519+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3002/hotel/home",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "VisualRegression",
+  "remediationRecommendation": "Automated guidance for VisualRegression in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.287524+00:00",
+    "notes": "Harvested telemetry for VisualRegression in Conduit",
+    "tags": [
+      "visualregression",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.287542+00:00"
+    }
+  }
+}

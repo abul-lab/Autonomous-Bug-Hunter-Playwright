@@ -1,0 +1,21 @@
+{
+  "datasetVersion": "PFD-v2.0",
+  "generatedAt": "2026-11-07T20:25:47.277218+00:00",
+  "totalRecords": 40,
+  "splits": {
+    "train": 30,
+    "validation": 5,
+    "test": 5
+  },
+  "taxonomyDistribution": {
+    "LocatorDrift": 5,
+    "TimingIssue": 5,
+    "AuthenticationFailure": 5,
+    "EnvironmentFailure": 5,
+    "BackendApiFailure": 5,
+    "TestDataFailure": 5,
+    "VisualRegression": 5,
+    "AssertionFailure": 5,
+    "Unknown": 0
+  }
+}

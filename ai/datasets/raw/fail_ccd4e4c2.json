@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_ccd4e4c2",
+  "timestamp": "2026-11-07T21:31:38.288852+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3001/checkout/summary",
+    "title": "DemoHotel - VisualRegression",
+    "routePattern": "/checkout/summary"
+  },
+  "route": "/checkout/summary",
+  "workflow": {
+    "journeyId": "journey_demohotel_visualregression",
+    "name": "DemoHotel VisualRegression Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "expect(page).toHaveScreenshot() failed: Element '#order-summary' overlaps with footer container",
+  "normalizedError": {
+    "signature": "VisualRegression_DemoHotel__checkout_summary",
+    "cleanedMessage": "expect(page).toHaveScreenshot() failed: Element '#order-summary' overlaps with footer container",
+    "salientTokens": [
+      "visualregression",
+      "demohotel",
+      "checkoutsummary",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3001/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "#order-summary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<div id=\"order-summary\" style=\"position: absolute; bottom: -50px;\">...</div>",
+    "parentTag": "div",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "react",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/hotel.spec.ts",
+      "line": 57,
+      "column": 12,
+      "method": "DemoHotelTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "a33bcb25309696313dfff97e9e9b80387bb1079167ff29ba87dd94b800542ffb",
+    "storagePath": "media/screenshots/fail_ccd4e4c2.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_ccd4e4c2.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "expect(page).toHaveScreenshot() failed: Element '#order-summary' overlaps with footer container",
+      "timestamp": "2026-11-07T21:31:38.288870+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3001/checkout/summary",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "VisualRegression",
+  "remediationRecommendation": "Automated guidance for VisualRegression in DemoHotel",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.288874+00:00",
+    "notes": "Harvested telemetry for VisualRegression in DemoHotel",
+    "tags": [
+      "visualregression",
+      "demohotel",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.288877+00:00"
+    }
+  }
+}

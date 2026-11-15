@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_5af12563",
+  "timestamp": "2026-11-07T21:31:38.260680+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/metrics",
+    "title": "Conduit - EnvironmentFailure",
+    "routePattern": "/metrics"
+  },
+  "route": "/metrics",
+  "workflow": {
+    "journeyId": "journey_conduit_environmentfailure",
+    "name": "Conduit EnvironmentFailure Workflow",
+    "role": "authenticated",
+    "stepIndex": 4
+  },
+  "errorMessage": "net::ERR_NAME_NOT_RESOLVED: DNS resolution failed for internal cluster service 'metrics-agent.internal'",
+  "normalizedError": {
+    "signature": "EnvironmentFailure_Conduit__metrics",
+    "cleanedMessage": "net::ERR_NAME_NOT_RESOLVED: DNS resolution failed for internal cluster service 'metrics-agent.internal'",
+    "salientTokens": [
+      "environmentfailure",
+      "conduit",
+      "metrics",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<body>DNS resolution failed</body>",
+    "parentTag": "body",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 49,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "509ae200108a8e0cb8a60799e0b1cb5ac668640003917272fe9811bcfe51bad5",
+    "storagePath": "media/screenshots/fail_5af12563.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_5af12563.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "net::ERR_NAME_NOT_RESOLVED: DNS resolution failed for internal cluster service 'metrics-agent.internal'",
+      "timestamp": "2026-11-07T21:31:38.260696+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3002/metrics",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "EnvironmentFailure",
+  "remediationRecommendation": "Automated guidance for EnvironmentFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.260700+00:00",
+    "notes": "Harvested telemetry for EnvironmentFailure in Conduit",
+    "tags": [
+      "environmentfailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.260703+00:00"
+    }
+  }
+}

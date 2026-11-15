@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_ed726322",
+  "timestamp": "2026-11-07T21:31:38.258665+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3002/api/healthz",
+    "title": "Conduit - EnvironmentFailure",
+    "routePattern": "/api/healthz"
+  },
+  "route": "/api/healthz",
+  "workflow": {
+    "journeyId": "journey_conduit_environmentfailure",
+    "name": "Conduit EnvironmentFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "net::ERR_CONNECTION_REFUSED at http://localhost:3000/api/healthz: Target host unreachable",
+  "normalizedError": {
+    "signature": "EnvironmentFailure_Conduit__api_healthz",
+    "cleanedMessage": "net::ERR_CONNECTION_REFUSED at http://localhost:3000/api/healthz: Target host unreachable",
+    "salientTokens": [
+      "environmentfailure",
+      "conduit",
+      "apihealthz",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3002/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "<html><body>502 Bad Gateway - Host unreachable</body></html>",
+    "parentTag": "html",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "vue",
+    "isHydrated": true,
+    "activePendingRequests": 0
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/conduit.spec.ts",
+      "line": 43,
+      "column": 12,
+      "method": "ConduitTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "644867a5f08bac83955fdde8b9efa06f40769ee0a4f6793d57e186d40bf26ad0",
+    "storagePath": "media/screenshots/fail_ed726322.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_ed726322.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "warn",
+      "text": "net::ERR_CONNECTION_REFUSED at http://localhost:3000/api/healthz: Target host unreachable",
+      "timestamp": "2026-11-07T21:31:38.258686+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3002/api/healthz",
+      "statusCode": 200,
+      "durationMs": 52.0,
+      "errorText": null
+    }
+  ],
+  "rootCauseCategory": "EnvironmentFailure",
+  "remediationRecommendation": "Automated guidance for EnvironmentFailure in Conduit",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.258691+00:00",
+    "notes": "Harvested telemetry for EnvironmentFailure in Conduit",
+    "tags": [
+      "environmentfailure",
+      "conduit",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.258695+00:00"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <rect width="900" height="450" fill="#0d1117" rx="8"/>
+  <rect x="1" y="1" width="898" height="448" fill="none" stroke="#30363d" stroke-width="2" rx="8"/>
+  <circle cx="24" cy="24" r="6" fill="#f85149"/>
+  <circle cx="44" cy="24" r="6" fill="#e3b341"/>
+  <circle cx="64" cy="24" r="6" fill="#238636"/>
+  <text x="90" y="29" fill="#8b949e" font-family="monospace" font-size="13">Autonomous Bug Hunter — Active Hunt Console (http://localhost:3100)</text>
+  <line x1="0" y1="48" x2="900" y2="48" stroke="#30363d" stroke-width="1"/>
+  
+  <rect x="24" y="72" width="260" height="350" fill="#161b22" stroke="#30363d" rx="6"/>
+  <text x="40" y="102" fill="#58a6ff" font-family="sans-serif" font-size="14" font-weight="bold">EXPLORATION TREE</text>
+  <text x="40" y="135" fill="#c9d1d9" font-family="monospace" font-size="12">GET /catalog [200 OK]</text>
+  <text x="40" y="165" fill="#c9d1d9" font-family="monospace" font-size="12">├── click [aria-label='Filter']</text>
+  <text x="40" y="195" fill="#c9d1d9" font-family="monospace" font-size="12">├── fill [input='search']</text>
+  <text x="40" y="225" fill="#e3b341" font-family="monospace" font-size="12">└── click [id='checkout'] (Probed)</text>
+  <text x="40" y="265" fill="#8b949e" font-family="monospace" font-size="11">Active Sessions: 2 Chromium</text>
+  <text x="40" y="290" fill="#8b949e" font-family="monospace" font-size="11">Deterministic Replays: Active</text>
+  
+  <rect x="304" y="72" width="572" height="350" fill="#161b22" stroke="#30363d" rx="6"/>
+  <text x="324" y="102" fill="#7ee787" font-family="sans-serif" font-size="14" font-weight="bold">LIVE TELEMETRY STREAM &amp; PROBES</text>
+  <rect x="324" y="120" width="532" height="180" fill="#0d1117" stroke="#21262d" rx="4"/>
+  <text x="340" y="145" fill="#8b949e" font-family="monospace" font-size="11">[ENGINE] sweep: route discovered /booking/confirm</text>
+  <text x="340" y="170" fill="#58a6ff" font-family="monospace" font-size="11">[PROBE] evaluating cross-role session boundary (Guest vs Desk)</text>
+  <text x="340" y="195" fill="#f85149" font-family="monospace" font-size="11">[FINDING] HTTP 403 bypassed on POST /api/reservations/override</text>
+  <text x="340" y="220" fill="#7ee787" font-family="monospace" font-size="11">[REPLAY] Replay 1 of 2: PASS (Clean session, reproduced in 412ms)</text>
+  <text x="340" y="245" fill="#7ee787" font-family="monospace" font-size="11">[REPLAY] Replay 2 of 2: PASS (Clean session, reproduced in 398ms)</text>
+  <text x="340" y="270" fill="#58a6ff" font-family="monospace" font-size="11">[PROOF] Finding confirmed. Shrunk to 3 user steps. Exported Playwright spec.</text>
+  
+  <rect x="324" y="320" width="255" height="80" fill="#21262d" rx="4"/>
+  <text x="336" y="345" fill="#8b949e" font-family="sans-serif" font-size="11">Confirmed Findings</text>
+  <text x="336" y="380" fill="#f85149" font-family="sans-serif" font-size="24" font-weight="bold">3 Defect Repros</text>
+  
+  <rect x="601" y="320" width="255" height="80" fill="#21262d" rx="4"/>
+  <text x="613" y="345" fill="#8b949e" font-family="sans-serif" font-size="11">Replay False Positive Rate</text>
+  <text x="613" y="380" fill="#7ee787" font-family="sans-serif" font-size="24" font-weight="bold">No FP (ref run)</text>
+</svg>

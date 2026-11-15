@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antigravity.qe/schemas/action-intent-v1.0.json",
+  "title": "ActionIntentRecord",
+  "description": "Schema for training Playwright Action Intent Understanding models from accessibility trees.",
+  "type": "object",
+  "required": [
+    "sampleId",
+    "pageContext",
+    "axTreeCondensed",
+    "targetElement",
+    "intentClass",
+    "atomicAction",
+    "verificationStatus"
+  ],
+  "properties": {
+    "sampleId": {
+      "type": "string",
+      "pattern": "^intent_[a-zA-Z0-9_-]{8,32}$"
+    },
+    "pageContext": {
+      "type": "object",
+      "required": ["url", "title", "activeRole"],
+      "properties": {
+        "url": { "type": "string" },
+        "title": { "type": "string" },
+        "activeRole": { "type": "string" },
+        "previousRoute": { "type": "string" }
+      }
+    },
+    "axTreeCondensed": {
+      "type": "string",
+      "description": "Condensed ARIA accessibility tree representation with interactive elements."
+    },
+    "targetElement": {
+      "type": "object",
+      "required": ["role", "name", "selector"],
+      "properties": {
+        "role": { "type": "string" },
+        "name": { "type": "string" },
+        "selector": { "type": "string" },
+        "testId": { "type": "string" },
+        "boundingBox": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" },
+            "width": { "type": "number" },
+            "height": { "type": "number" }
+          }
+        }
+      }
+    },
+    "intentClass": {
+      "type": "string",
+      "enum": [
+        "complete_checkout",
+        "add_to_cart",
+        "search_catalog",
+        "apply_filter",
+        "authenticate_user",
+        "terminate_session",
+        "fill_form_field",
+        "toggle_navigation",
+        "paginate_results",
+        "cancel_transaction",
+        "select_date_range",
+        "confirm_modal_dialog"
+      ]
+    },
+    "atomicAction": {
+      "type": "string",
+      "enum": ["click", "fill", "check", "select", "press", "navigate"]
+    },
+    "actionPayload": {
+      "type": "string",
+      "description": "Text filled or value selected, if applicable."
+    },
+    "expectedStateTransition": {
+      "type": "string",
+      "description": "Expected target URL or modal appearance upon action execution."
+    },
+    "verificationStatus": {
+      "type": "string",
+      "enum": ["unverified", "replay_verified", "human_verified"]
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <rect width="900" height="450" fill="#0d1117" rx="8" stroke="#30363d" stroke-width="2"/>
+  <text x="24" y="35" fill="#58a6ff" font-family="sans-serif" font-size="16" font-weight="bold">Playwright Failure Dataset (PFD) &amp; Benchmark (PIB)</text>
+  <text x="24" y="58" fill="#8b949e" font-family="sans-serif" font-size="12">Empirical results from first fine-tuning run of ModernBERT-base on PFD-v1.0</text>
+  
+  <rect x="24" y="80" width="420" height="340" fill="#161b22" stroke="#30363d" rx="6"/>
+  <text x="40" y="110" fill="#7ee787" font-family="sans-serif" font-size="13" font-weight="bold">PFD-v1.0 DATASET COMPOSITION</text>
+  <text x="40" y="140" fill="#c9d1d9" font-family="monospace" font-size="11">Total Curated Incidents: 100 samples</text>
+  <text x="40" y="165" fill="#c9d1d9" font-family="monospace" font-size="11">Training Split: 75 samples (train.jsonl)</text>
+  <text x="40" y="190" fill="#c9d1d9" font-family="monospace" font-size="11">Validation Split: 12 samples (val.jsonl)</text>
+  <text x="40" y="215" fill="#c9d1d9" font-family="monospace" font-size="11">Held-Out Test Split: 13 samples (test.jsonl)</text>
+  
+  <text x="40" y="260" fill="#e3b341" font-family="sans-serif" font-size="12" font-weight="bold">DATASET QUALITY LESSONS LEARNED:</text>
+  <text x="40" y="285" fill="#8b949e" font-family="monospace" font-size="10">• 4 synthetic templates per class caused superficial overfit.</text>
+  <text x="40" y="305" fill="#8b949e" font-family="monospace" font-size="10">• Test split had 3 of 8 classes (skew capped Macro F1).</text>
+  <text x="40" y="325" fill="#8b949e" font-family="monospace" font-size="10">• failedLocator unpopulated in synthetic generator.</text>
+  
+  <rect x="456" y="80" width="420" height="340" fill="#161b22" stroke="#30363d" rx="6"/>
+  <text x="472" y="110" fill="#58a6ff" font-family="sans-serif" font-size="13" font-weight="bold">PIB-v1.0 BENCHMARK EMPIRICAL METRICS</text>
+  <text x="472" y="140" fill="#c9d1d9" font-family="monospace" font-size="11">Overall Test Accuracy: 23.08%</text>
+  <text x="472" y="165" fill="#c9d1d9" font-family="monospace" font-size="11">Overall Macro F1: 20.00%</text>
+  <text x="472" y="190" fill="#c9d1d9" font-family="monospace" font-size="11">Inference Latency: not measured</text>
+  
+  <rect x="472" y="215" width="388" height="85" fill="#0d1117" stroke="#21262d" rx="4"/>
+  <text x="484" y="240" fill="#7ee787" font-family="monospace" font-size="11">VisualRegression: 100% Precision / Recall / F1</text>
+  <text x="484" y="265" fill="#f85149" font-family="monospace" font-size="11">BackendApiFailure: 0.00% (Collided with Auth)</text>
+  <text x="484" y="285" fill="#f85149" font-family="monospace" font-size="11">LocatorDrift: 0.00% (Missing locator signal)</text>
+  
+  <text x="472" y="330" fill="#8b949e" font-family="sans-serif" font-size="11">Engineering Takeaway:</text>
+  <text x="472" y="350" fill="#c9d1d9" font-family="sans-serif" font-size="11">Transparent reporting of baseline metrics; telemetry data</text>
+  <text x="472" y="370" fill="#c9d1d9" font-family="sans-serif" font-size="11">quality is the bottleneck, not transformer architecture.</text>
+</svg>

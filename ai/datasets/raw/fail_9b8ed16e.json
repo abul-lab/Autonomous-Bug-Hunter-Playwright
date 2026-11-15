@@ -1,0 +1,148 @@
+{
+  "failureId": "fail_9b8ed16e",
+  "timestamp": "2026-11-07T21:31:38.271075+00:00",
+  "browser": {
+    "name": "chromium",
+    "version": "131.0.6778.85",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "os": "Windows_NT"
+  },
+  "page": {
+    "url": "http://localhost:3000/api/articles",
+    "title": "DemoShop - BackendApiFailure",
+    "routePattern": "/api/articles"
+  },
+  "route": "/api/articles",
+  "workflow": {
+    "journeyId": "journey_demoshop_backendapifailure",
+    "name": "DemoShop BackendApiFailure Workflow",
+    "role": "guest",
+    "stepIndex": 4
+  },
+  "errorMessage": "Request failed with status code 500 Internal Server Error: Database connection pool exhausted (timeout 15000ms)",
+  "normalizedError": {
+    "signature": "BackendApiFailure_DemoShop__api_articles",
+    "cleanedMessage": "Request failed with status code 500 Internal Server Error: Database connection pool exhausted (timeout 15000ms)",
+    "salientTokens": [
+      "backendapifailure",
+      "demoshop",
+      "apiarticles",
+      "error"
+    ]
+  },
+  "precedingActionTrail": [
+    {
+      "actionType": "navigate",
+      "selector": null,
+      "payload": "http://localhost:3000/",
+      "deltaMs": 1100
+    },
+    {
+      "actionType": "click",
+      "selector": "nav a[href*='catalog']",
+      "payload": null,
+      "deltaMs": 420
+    },
+    {
+      "actionType": "fill",
+      "selector": "input.search",
+      "payload": "sample query",
+      "deltaMs": 280
+    },
+    {
+      "actionType": "click",
+      "selector": "button.primary",
+      "payload": null,
+      "deltaMs": 95
+    }
+  ],
+  "domFragmentAtFailure": {
+    "outerHtml": "{\"statusCode\": 500, \"message\": \"Connection pool exhausted\"}",
+    "parentTag": "body",
+    "computedStyles": {
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1",
+      "zIndex": "10"
+    }
+  },
+  "frameworkState": {
+    "framework": "nextjs",
+    "isHydrated": true,
+    "activePendingRequests": 1
+  },
+  "stackTrace": [
+    {
+      "file": "tests/e2e/shop.spec.ts",
+      "line": 55,
+      "column": 12,
+      "method": "DemoShopTest.execute"
+    }
+  ],
+  "screenshotMetadata": {
+    "sha256": "b8d700f3147880840c8b5b8bd557067274ce47d95c5245e0212b320708b96468",
+    "storagePath": "media/screenshots/fail_9b8ed16e.png",
+    "dimensions": "1280x720",
+    "mimeType": "image/png"
+  },
+  "traceMetadata": {
+    "traceZipPath": "media/traces/fail_9b8ed16e.trace.zip",
+    "actionsCount": 4,
+    "networkRequestsCount": 6
+  },
+  "consoleLogs": [
+    {
+      "level": "error",
+      "text": "Request failed with status code 500 Internal Server Error: Database connection pool exhausted (timeout 15000ms)",
+      "timestamp": "2026-11-07T21:31:38.271091+00:00"
+    }
+  ],
+  "networkSummary": [
+    {
+      "method": "POST",
+      "url": "http://localhost:3000/api/articles",
+      "statusCode": 500,
+      "durationMs": 52.0,
+      "errorText": "Internal Server Error"
+    }
+  ],
+  "rootCauseCategory": "BackendApiFailure",
+  "remediationRecommendation": "Automated guidance for BackendApiFailure in DemoShop",
+  "confidence": 0.95,
+  "verificationStatus": "ai_proposed",
+  "curationMetadata": {
+    "reviewedBy": "pending_review",
+    "reviewedAt": "2026-11-07T21:31:38.271094+00:00",
+    "notes": "Harvested telemetry for BackendApiFailure in DemoShop",
+    "tags": [
+      "backendapifailure",
+      "demoshop",
+      "harvested"
+    ]
+  },
+  "governanceMetadata": {
+    "piiScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "redactionsCount": 0
+    },
+    "secretScan": {
+      "status": "PENDING",
+      "scanner": "unscanned",
+      "secretsDetected": 0
+    },
+    "screenshotAudit": {
+      "status": "PENDING",
+      "ocrScanned": false,
+      "auditedBy": "unassigned"
+    },
+    "publicationApproval": {
+      "approvedForInternalTraining": false,
+      "approvedForPublicRelease": false,
+      "decisionTimestamp": "2026-11-07T21:31:38.271097+00:00"
+    }
+  }
+}
